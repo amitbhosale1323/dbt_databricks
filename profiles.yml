@@ -1,0 +1,11 @@
+dbt_databricks:
+  target: dev
+  outputs:
+    dev:
+      type: databricks
+      host: your-workspace.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/your-warehouse-id
+      schema: analytics
+      token: your-token-here
+      catalog: main
+      threads: 4
